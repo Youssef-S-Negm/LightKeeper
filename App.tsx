@@ -1,13 +1,19 @@
 import React, { useEffect, useState } from 'react';
 import {
+  Animated,
   Button,
   DeviceEventEmitter,
   SafeAreaView,
   StyleSheet,
+  Text,
 } from 'react-native';
 
 import NativeTorch from './specs/NativeTorch';
 import NativeLightSensor from './specs/NativeLightSensor';
+import AnimatedBackground from './components/AnimatedBackground';
+import AnimatedStatusBar from './components/AnimatedStatusBar';
+import AnimatedText from './components/AnimatedText';
+import AnimatedIcon from './components/AnimatedIcon';
 
 function App(): React.JSX.Element {
   const [isDim, setIsDim] = useState(false);
@@ -35,14 +41,11 @@ function App(): React.JSX.Element {
 
   return (
     <SafeAreaView style={styles.container}>
-      <Button
-        title="On"
-        onPress={() => NativeTorch.toggleOn()}
-      />
-      <Button
-        title="Off"
-        onPress={() => NativeTorch.toggleOff()}
-      />
+      <AnimatedStatusBar isDim={isDim} />
+      <AnimatedBackground isDim={isDim}>
+        <AnimatedText isDim={isDim} />
+        <AnimatedIcon isDim={isDim} />
+      </AnimatedBackground>
     </SafeAreaView>
   );
 }
