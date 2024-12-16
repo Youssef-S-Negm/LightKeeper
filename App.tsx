@@ -1,11 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import {
-  Animated,
-  Button,
   DeviceEventEmitter,
   SafeAreaView,
   StyleSheet,
-  Text,
 } from 'react-native';
 
 import NativeTorch from './specs/NativeTorch';
