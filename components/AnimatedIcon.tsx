@@ -1,4 +1,4 @@
-import { Animated, Easing, StyleSheet, useAnimatedValue } from 'react-native';
+import { Animated, Easing, useAnimatedValue } from 'react-native';
 import React, { useEffect } from 'react';
 
 const AnimatedIcon = ({ isDim }: { isDim: boolean }) => {
