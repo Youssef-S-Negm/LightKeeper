@@ -27,7 +27,7 @@ Follow these steps to run the app locally:
    npm start
    ```
 
-3. Run and build the app
+3. Build and run the app
    ```bash
    npm run android
    ```
