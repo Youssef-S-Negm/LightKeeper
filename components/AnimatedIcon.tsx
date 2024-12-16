@@ -60,10 +60,3 @@ const AnimatedIcon = ({ isDim }: { isDim: boolean }) => {
 };
 
 export default AnimatedIcon;
-
-const styles = StyleSheet.create({
-    image: {
-        height: 250,
-        width: 250,
-    },
-});
